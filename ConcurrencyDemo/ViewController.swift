@@ -12,7 +12,7 @@ let imageURLs = ["http://www.planetware.com/photos-large/F/france-paris-eiffel-t
 
 class Downloader {
     
-    class func downloadImageWithURL(url:String) -> UIImage! {
+    class func downloadImageWithURL(_ url:String) -> UIImage! {
         
         let data = NSData(contentsOf: NSURL(string: url)! as URL)
         return UIImage(data: data! as Data)
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         queue = OperationQueue()
         
         let operation1 = BlockOperation(block: {
-            let img1 = Downloader.downloadImageWithURL(url: imageURLs[0])
+            let img1 = Downloader.downloadImageWithURL(imageURLs[0])
             OperationQueue.main.addOperation {
                 self.imageView1.image = img1
             }
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         queue.addOperation(operation1)
         
         let operation2 = BlockOperation(block: {
-            let img2 = Downloader.downloadImageWithURL(url: imageURLs[1])
+            let img2 = Downloader.downloadImageWithURL(imageURLs[1])
             OperationQueue.main.addOperation {
                 self.imageView2.image = img2
             }
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         
         
         let operation3 = BlockOperation(block: {
-            let img3 = Downloader.downloadImageWithURL(url: imageURLs[2])
+            let img3 = Downloader.downloadImageWithURL(imageURLs[2])
             OperationQueue.main.addOperation({
                 self.imageView3.image = img3
             })
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         queue.addOperation(operation3)
         
         let operation4 = BlockOperation(block: {
-            let img4 = Downloader.downloadImageWithURL(url: imageURLs[3])
+            let img4 = Downloader.downloadImageWithURL(imageURLs[3])
             OperationQueue.main.addOperation{
                 self.imageView4.image = img4
             }
@@ -97,6 +97,7 @@ class ViewController: UIViewController {
         queue.addOperation(operation4)
         
     }
+    
     @IBAction func sliderValueChanged(sender: UISlider) {
         
         self.sliderValueLabel.text = "\(sender.value * 100.0)"
