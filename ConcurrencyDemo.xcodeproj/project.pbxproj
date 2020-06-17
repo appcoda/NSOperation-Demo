@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845747A3249A450800862E2F /* BlockingUIWhileDownloadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845747A2249A450800862E2F /* BlockingUIWhileDownloadingViewController.swift */; };
 		DA0283911BF90DA900AA4DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0283901BF90DA900AA4DAC /* AppDelegate.swift */; };
 		DA0283931BF90DA900AA4DAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0283921BF90DA900AA4DAC /* ViewController.swift */; };
 		DA0283961BF90DA900AA4DAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0283941BF90DA900AA4DAC /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		845747A2249A450800862E2F /* BlockingUIWhileDownloadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockingUIWhileDownloadingViewController.swift; sourceTree = "<group>"; };
 		DA02838D1BF90DA900AA4DAC /* ConcurrencyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0283901BF90DA900AA4DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA0283921BF90DA900AA4DAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				DA0283901BF90DA900AA4DAC /* AppDelegate.swift */,
 				DA0283921BF90DA900AA4DAC /* ViewController.swift */,
+				845747A2249A450800862E2F /* BlockingUIWhileDownloadingViewController.swift */,
 				DA0283941BF90DA900AA4DAC /* Main.storyboard */,
 				DA0283971BF90DA900AA4DAC /* Assets.xcassets */,
 				DA0283991BF90DA900AA4DAC /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				DA0283931BF90DA900AA4DAC /* ViewController.swift in Sources */,
 				DA0283911BF90DA900AA4DAC /* AppDelegate.swift in Sources */,
+				845747A3249A450800862E2F /* BlockingUIWhileDownloadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
