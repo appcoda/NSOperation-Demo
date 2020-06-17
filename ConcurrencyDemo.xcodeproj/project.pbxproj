@@ -13,6 +13,9 @@
 		845747A9249A622F00862E2F /* OperationQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845747A8249A622F00862E2F /* OperationQueueViewController.swift */; };
 		845747AD249A67D100862E2F /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845747AC249A67D100862E2F /* Downloader.swift */; };
 		845747AF249A67F800862E2F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845747AE249A67F800862E2F /* Global.swift */; };
+		845747B1249A709000862E2F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 845747B0249A709000862E2F /* README.md */; };
+		845747B4249A718900862E2F /* GCD.png in Resources */ = {isa = PBXBuildFile; fileRef = 845747B2249A718900862E2F /* GCD.png */; };
+		845747B5249A718900862E2F /* OperationQueue.png in Resources */ = {isa = PBXBuildFile; fileRef = 845747B3249A718900862E2F /* OperationQueue.png */; };
 		DA0283911BF90DA900AA4DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0283901BF90DA900AA4DAC /* AppDelegate.swift */; };
 		DA0283931BF90DA900AA4DAC /* BlockOperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0283921BF90DA900AA4DAC /* BlockOperationViewController.swift */; };
 		DA0283961BF90DA900AA4DAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0283941BF90DA900AA4DAC /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 		845747A8249A622F00862E2F /* OperationQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationQueueViewController.swift; sourceTree = "<group>"; };
 		845747AC249A67D100862E2F /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		845747AE249A67F800862E2F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		845747B0249A709000862E2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		845747B2249A718900862E2F /* GCD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GCD.png; sourceTree = "<group>"; };
+		845747B3249A718900862E2F /* OperationQueue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OperationQueue.png; sourceTree = "<group>"; };
 		DA02838D1BF90DA900AA4DAC /* ConcurrencyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0283901BF90DA900AA4DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA0283921BF90DA900AA4DAC /* BlockOperationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockOperationViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +56,9 @@
 		DA0283841BF90DA900AA4DAC = {
 			isa = PBXGroup;
 			children = (
+				845747B0249A709000862E2F /* README.md */,
+				845747B2249A718900862E2F /* GCD.png */,
+				845747B3249A718900862E2F /* OperationQueue.png */,
 				DA02838F1BF90DA900AA4DAC /* ConcurrencyDemo */,
 				DA02838E1BF90DA900AA4DAC /* Products */,
 			);
@@ -140,8 +149,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845747B4249A718900862E2F /* GCD.png in Resources */,
 				DA02839B1BF90DA900AA4DAC /* LaunchScreen.storyboard in Resources */,
 				DA0283981BF90DA900AA4DAC /* Assets.xcassets in Resources */,
+				845747B5249A718900862E2F /* OperationQueue.png in Resources */,
+				845747B1249A709000862E2F /* README.md in Resources */,
 				DA0283961BF90DA900AA4DAC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
