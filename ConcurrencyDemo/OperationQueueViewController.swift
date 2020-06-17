@@ -27,19 +27,12 @@ class OperationQueueViewController: UIViewController {
     @IBAction func didClickOnStart(sender: AnyObject) {
         
         queue = OperationQueue()
-        // addOperationWithBlock
+        /// addOperationWithBlock
         queue?.addOperation {
             let img1 = Downloader.downloadImageWithURL(imageURLs[0])
             //            DispatchQueue.main.async {
             //                self.imageView1.image = img1
             //            }
-            OperationQueue.main.addOperation {
-                self.imageView1.image = img1
-            }
-        }
-        
-        queue?.addOperation {
-            let img1 = Downloader.downloadImageWithURL(imageURLs[0])
             OperationQueue.main.addOperation {
                 self.imageView1.image = img1
             }

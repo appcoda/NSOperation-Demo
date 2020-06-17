@@ -11,8 +11,10 @@
 		845747A5249A4AF600862E2F /* NonBlockingUIWhileDownloadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845747A4249A4AF600862E2F /* NonBlockingUIWhileDownloadingViewController.swift */; };
 		845747A7249A575E00862E2F /* SerialDispatchQueuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845747A6249A575E00862E2F /* SerialDispatchQueuesViewController.swift */; };
 		845747A9249A622F00862E2F /* OperationQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845747A8249A622F00862E2F /* OperationQueueViewController.swift */; };
+		845747AD249A67D100862E2F /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845747AC249A67D100862E2F /* Downloader.swift */; };
+		845747AF249A67F800862E2F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845747AE249A67F800862E2F /* Global.swift */; };
 		DA0283911BF90DA900AA4DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0283901BF90DA900AA4DAC /* AppDelegate.swift */; };
-		DA0283931BF90DA900AA4DAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0283921BF90DA900AA4DAC /* ViewController.swift */; };
+		DA0283931BF90DA900AA4DAC /* BlockOperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0283921BF90DA900AA4DAC /* BlockOperationViewController.swift */; };
 		DA0283961BF90DA900AA4DAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0283941BF90DA900AA4DAC /* Main.storyboard */; };
 		DA0283981BF90DA900AA4DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0283971BF90DA900AA4DAC /* Assets.xcassets */; };
 		DA02839B1BF90DA900AA4DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0283991BF90DA900AA4DAC /* LaunchScreen.storyboard */; };
@@ -23,9 +25,11 @@
 		845747A4249A4AF600862E2F /* NonBlockingUIWhileDownloadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonBlockingUIWhileDownloadingViewController.swift; sourceTree = "<group>"; };
 		845747A6249A575E00862E2F /* SerialDispatchQueuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialDispatchQueuesViewController.swift; sourceTree = "<group>"; };
 		845747A8249A622F00862E2F /* OperationQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationQueueViewController.swift; sourceTree = "<group>"; };
+		845747AC249A67D100862E2F /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		845747AE249A67F800862E2F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		DA02838D1BF90DA900AA4DAC /* ConcurrencyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0283901BF90DA900AA4DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA0283921BF90DA900AA4DAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA0283921BF90DA900AA4DAC /* BlockOperationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockOperationViewController.swift; sourceTree = "<group>"; };
 		DA0283951BF90DA900AA4DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA0283971BF90DA900AA4DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA02839A1BF90DA900AA4DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,11 +68,13 @@
 			children = (
 				DA0283901BF90DA900AA4DAC /* AppDelegate.swift */,
 				DA0283941BF90DA900AA4DAC /* Main.storyboard */,
-				DA0283921BF90DA900AA4DAC /* ViewController.swift */,
 				845747A2249A450800862E2F /* BlockingUIWhileDownloadingViewController.swift */,
 				845747A4249A4AF600862E2F /* NonBlockingUIWhileDownloadingViewController.swift */,
 				845747A6249A575E00862E2F /* SerialDispatchQueuesViewController.swift */,
 				845747A8249A622F00862E2F /* OperationQueueViewController.swift */,
+				DA0283921BF90DA900AA4DAC /* BlockOperationViewController.swift */,
+				845747AC249A67D100862E2F /* Downloader.swift */,
+				845747AE249A67F800862E2F /* Global.swift */,
 				DA0283971BF90DA900AA4DAC /* Assets.xcassets */,
 				DA0283991BF90DA900AA4DAC /* LaunchScreen.storyboard */,
 				DA02839C1BF90DA900AA4DAC /* Info.plist */,
@@ -147,10 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845747AF249A67F800862E2F /* Global.swift in Sources */,
 				845747A5249A4AF600862E2F /* NonBlockingUIWhileDownloadingViewController.swift in Sources */,
+				845747AD249A67D100862E2F /* Downloader.swift in Sources */,
 				845747A7249A575E00862E2F /* SerialDispatchQueuesViewController.swift in Sources */,
 				845747A9249A622F00862E2F /* OperationQueueViewController.swift in Sources */,
-				DA0283931BF90DA900AA4DAC /* ViewController.swift in Sources */,
+				DA0283931BF90DA900AA4DAC /* BlockOperationViewController.swift in Sources */,
 				DA0283911BF90DA900AA4DAC /* AppDelegate.swift in Sources */,
 				845747A3249A450800862E2F /* BlockingUIWhileDownloadingViewController.swift in Sources */,
 			);
