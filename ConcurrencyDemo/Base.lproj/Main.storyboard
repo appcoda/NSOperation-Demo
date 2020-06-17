@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="1307"/>
+            <point key="canvasLocation" x="-127" y="2495"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y4g-3Y-IEG">
@@ -197,7 +197,7 @@
                                                     <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="eFS-1P-d60" kind="show" id="yDq-D9-vkK"/>
+                                                    <segue destination="JgB-JV-OEN" kind="show" id="Ih3-zJ-UZz"/>
                                                 </connections>
                                             </button>
                                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sF-7z-ClG">
@@ -223,18 +223,37 @@
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kHh-re-At4">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <state key="normal" title="Using Serial Dispatch Queues &gt;">
+                                                <state key="normal" title="Operation Queues (addOperationWithBlock)  &gt;">
                                                     <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="eFS-1P-d60" kind="show" id="L2A-QD-N6O"/>
+                                                </connections>
                                             </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP1-Ek-q9f">
-                                                <rect key="frame" x="0.0" y="30" width="343" height="397.5"/>
+                                                <rect key="frame" x="0.0" y="30" width="343" height="396.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <string key="text">Each app has one default serial queue, you must create a new queue, otherwise you will be executing your tasks while the app is attempting to execute the tasks for updating the UI</string>
+                                                <mutableString key="text">GCD is a low-level C API that execute tasks concurrently. Operation queues, are high level abstraction of the queue model, and is built on top of GCD.
+Unlike GCD, they don’t conform to the First-In-First-Out order
+Set an execution priority for operations
+Add dependencies between operations, which means you can define that some operations will only be executed after the completion of other operations.
+
+NSOperation is an abstract class which can’t be used directly so you have to use NSOperation subclasses
+
+* NSBlockOperation – Use this class to initiate operation with one or more blocks. The operation itself can contain more than one block and the operation will be considered as finish when all blocks are executed.
+
+* NSInvocationOperation – Use this class to initiate an operation that consists of invoking a selector on a specified object.</mutableString>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmI-Ub-Ec1" userLabel="seprator">
+                                                <rect key="frame" x="0.0" y="426.5" width="343" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="dXG-RE-QZe"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -354,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hnk-VM-PtB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2503" y="-1438"/>
+            <point key="canvasLocation" x="2502" y="-1151"/>
         </scene>
         <!--Non BlockingUI While Downloading View Controller-->
         <scene sceneID="pw6-FC-AFi">
@@ -438,12 +457,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnK-CE-mpc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2502" y="-658"/>
+            <point key="canvasLocation" x="2502" y="-489"/>
         </scene>
-        <!--Serial Dispatch Queues View Controller-->
+        <!--Operation Queue View Controller-->
         <scene sceneID="C9i-6S-edV">
             <objects>
-                <viewController id="eFS-1P-d60" customClass="SerialDispatchQueuesViewController" customModule="ConcurrencyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eFS-1P-d60" customClass="OperationQueueViewController" customModule="ConcurrencyDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="snV-w7-NrY"/>
                         <viewControllerLayoutGuide type="bottom" id="Odj-0d-ojF"/>
@@ -522,7 +541,91 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtS-M2-4ZF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2502" y="53"/>
+            <point key="canvasLocation" x="1863" y="829"/>
+        </scene>
+        <!--Serial Dispatch Queues View Controller-->
+        <scene sceneID="OfF-sV-LIQ">
+            <objects>
+                <viewController id="JgB-JV-OEN" customClass="SerialDispatchQueuesViewController" customModule="ConcurrencyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wbH-Xk-qIu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zts-MJ-rc5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o0p-qM-xrg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bkl-jk-JnV" userLabel="Image View1">
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="207.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gTr-cx-TJu">
+                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="207.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NDJ-5W-3EO">
+                                <rect key="frame" x="0.0" y="207.5" width="187.5" height="207.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WxT-rP-GAS">
+                                <rect key="frame" x="187.5" y="207.5" width="187.5" height="208"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cC9-LD-5Mf">
+                                <rect key="frame" x="37.5" y="585" width="300" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="NJw-Xm-VTd"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChangedWithSender:" destination="JgB-JV-OEN" eventType="valueChanged" id="itU-Lt-MZC"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCu-Fo-L7a">
+                                <rect key="frame" x="177.5" y="550" width="20.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NDJ-5W-3EO" firstAttribute="leading" secondItem="o0p-qM-xrg" secondAttribute="leading" id="1Ba-pv-1Nf"/>
+                            <constraint firstItem="gTr-cx-TJu" firstAttribute="width" secondItem="o0p-qM-xrg" secondAttribute="width" multiplier="0.5" id="7Z7-yL-EXa"/>
+                            <constraint firstItem="gTr-cx-TJu" firstAttribute="height" secondItem="o0p-qM-xrg" secondAttribute="height" multiplier="0.3333" id="Anx-9F-hxF"/>
+                            <constraint firstItem="cC9-LD-5Mf" firstAttribute="top" secondItem="gCu-Fo-L7a" secondAttribute="bottom" constant="14" id="DDJ-aK-U8d"/>
+                            <constraint firstItem="WxT-rP-GAS" firstAttribute="width" secondItem="o0p-qM-xrg" secondAttribute="width" multiplier="0.5" id="HsU-TG-fen"/>
+                            <constraint firstItem="WxT-rP-GAS" firstAttribute="height" secondItem="o0p-qM-xrg" secondAttribute="height" multiplier="1/3" id="IWS-Z4-RUw"/>
+                            <constraint firstItem="NDJ-5W-3EO" firstAttribute="width" secondItem="o0p-qM-xrg" secondAttribute="width" multiplier="0.5" id="JI2-rp-LOj"/>
+                            <constraint firstAttribute="trailing" secondItem="gTr-cx-TJu" secondAttribute="trailing" id="Qi2-Ti-rAv"/>
+                            <constraint firstAttribute="trailing" secondItem="WxT-rP-GAS" secondAttribute="trailing" id="Rfp-yh-u2P"/>
+                            <constraint firstItem="gCu-Fo-L7a" firstAttribute="centerX" secondItem="o0p-qM-xrg" secondAttribute="centerX" id="Vfi-NU-Dsg"/>
+                            <constraint firstItem="bkl-jk-JnV" firstAttribute="width" secondItem="o0p-qM-xrg" secondAttribute="width" multiplier="0.5" id="VtP-VB-uEu"/>
+                            <constraint firstItem="WxT-rP-GAS" firstAttribute="top" secondItem="gTr-cx-TJu" secondAttribute="bottom" id="aLi-tb-yne"/>
+                            <constraint firstItem="cC9-LD-5Mf" firstAttribute="centerX" secondItem="o0p-qM-xrg" secondAttribute="centerX" id="df6-1l-6us"/>
+                            <constraint firstItem="NDJ-5W-3EO" firstAttribute="height" secondItem="o0p-qM-xrg" secondAttribute="height" multiplier="0.333" id="em2-46-Sp4"/>
+                            <constraint firstItem="gTr-cx-TJu" firstAttribute="top" secondItem="o0p-qM-xrg" secondAttribute="top" id="fn4-km-wn9"/>
+                            <constraint firstItem="bkl-jk-JnV" firstAttribute="height" secondItem="o0p-qM-xrg" secondAttribute="height" multiplier="0.333" id="geQ-gJ-DYl"/>
+                            <constraint firstItem="bkl-jk-JnV" firstAttribute="top" secondItem="o0p-qM-xrg" secondAttribute="top" id="kNm-58-kpX"/>
+                            <constraint firstItem="bkl-jk-JnV" firstAttribute="leading" secondItem="o0p-qM-xrg" secondAttribute="leading" id="lzh-am-7xq"/>
+                            <constraint firstAttribute="bottom" secondItem="cC9-LD-5Mf" secondAttribute="bottom" constant="8" id="mJe-eb-0MZ"/>
+                            <constraint firstItem="NDJ-5W-3EO" firstAttribute="top" secondItem="bkl-jk-JnV" secondAttribute="bottom" id="pQB-X4-YtD"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="65A-V9-YGK">
+                        <barButtonItem key="rightBarButtonItem" title="Start" id="QDk-r1-clP">
+                            <connections>
+                                <action selector="didClickOnStartWithSender:" destination="JgB-JV-OEN" id="BY3-FT-bUS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView1" destination="bkl-jk-JnV" id="j0g-98-N7b"/>
+                        <outlet property="imageView2" destination="gTr-cx-TJu" id="9gl-fD-lj1"/>
+                        <outlet property="imageView3" destination="NDJ-5W-3EO" id="xWs-UW-rHO"/>
+                        <outlet property="imageView4" destination="WxT-rP-GAS" id="Nf2-eF-5xW"/>
+                        <outlet property="sliderValueLabel" destination="gCu-Fo-L7a" id="2jP-m5-8bk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g71-0J-HD1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2502" y="161"/>
         </scene>
     </scenes>
 </document>

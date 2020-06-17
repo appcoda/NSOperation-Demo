@@ -23,7 +23,13 @@ class NonBlockingUIWhileDownloadingViewController: UIViewController {
     }
     
     @IBAction func didClickOnStart(sender: AnyObject) {
+        //        DispatchQueue.global().async {
+        //            // qos' default value is ´DispatchQoS.QoSClass.default`
+        //        }
         
+        //        DispatchQueue.global(qos: .default).async {
+        //
+        //        }
         let queue = DispatchQueue.global(qos: .default)
         
         queue.async {

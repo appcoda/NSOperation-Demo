@@ -24,7 +24,7 @@ class SerialDispatchQueuesViewController: UIViewController {
     
     @IBAction func didClickOnStart(sender: AnyObject) {
         
-                        ///concurrent queue
+        ///concurrent queue
         //        let concurrentQueue = DispatchQueue(label: "queuename", attributes: .concurrent)
         //        concurrentQueue.sync {
         //
@@ -32,7 +32,7 @@ class SerialDispatchQueuesViewController: UIViewController {
         
         ///Create a serial queue
         let serialQueue = DispatchQueue(label: "com.appcoda.imagesQueue")
-
+        
         serialQueue.async {
             let img1 = Downloader.downloadImageWithURL(imageURLs[0])
             DispatchQueue.main.async {
