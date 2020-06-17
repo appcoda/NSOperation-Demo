@@ -1,6 +1,8 @@
 # A simple demo about NSOperation and Grand Central Dispatch
 
-
+<p align="center">
+  <img src ="https://github.com/amrangry/ClockWise/blob/master/logo.png?raw=true"/>
+</p>
 
 Dispatch queues
 are an easy way to perform tasks asynchronously and concurrently in your application.
@@ -52,8 +54,9 @@ Reference of your preferred queue using the function dispatch_get_global_queue�
 
 
 <p align="center">
-  <img src ="https://github.com/amrangry/ClockWise/blob/master/logo.png?raw=true"/>
+  <img src ="https://github.com/amrangry/NSOperation-Demo/blob/master/GCD.png?raw=true"/>
 </p>
+
 
 Part 2: Operation Queues:
 
@@ -72,7 +75,7 @@ NSOperation is an abstract class which can’t be used directly so you have to u
 2. NSInvocationOperation – Use this class to initiate an operation that consists of invoking a selector on a specified object.
 ￼
 <p align="center">
-  <img src ="https://github.com/amrangry/ClockWise/blob/master/logo.png?raw=true"/>
+  <img src ="https://github.com/amrangry/NSOperation-Demo/blob/master/OperationQueue.png?raw=true"/>
 </p>
 
 the advantages of NSOperation?
