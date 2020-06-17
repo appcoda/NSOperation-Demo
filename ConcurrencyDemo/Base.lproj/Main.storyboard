@@ -8,115 +8,6 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConcurrencyDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S10-3H-623" userLabel="Image View1">
-                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="207.5"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oat-JP-Eb3">
-                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="207.5"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bv1-OJ-cm9">
-                                <rect key="frame" x="0.0" y="207.5" width="187.5" height="207.5"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Akn-RP-ixR">
-                                <rect key="frame" x="187.5" y="207.5" width="187.5" height="208"/>
-                            </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QTm-6D-TVu">
-                                <rect key="frame" x="37.5" y="585" width="300" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="296" id="6jq-nW-VZp"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="rh7-S2-Jcg"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCI-c7-UFu">
-                                <rect key="frame" x="279" y="463" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="oat-JP-Eb3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="4ur-PY-BHb"/>
-                            <constraint firstItem="oCI-c7-UFu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CvP-fR-qOf"/>
-                            <constraint firstItem="QTm-6D-TVu" firstAttribute="top" secondItem="oCI-c7-UFu" secondAttribute="bottom" constant="14" id="ERc-PH-b3W"/>
-                            <constraint firstItem="Akn-RP-ixR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Et9-ub-Xhv"/>
-                            <constraint firstItem="S10-3H-623" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.333" id="GWz-IZ-mKH"/>
-                            <constraint firstItem="Akn-RP-ixR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/3" id="J02-PS-RJR"/>
-                            <constraint firstAttribute="trailing" secondItem="Akn-RP-ixR" secondAttribute="trailing" id="Jd3-g8-wBg"/>
-                            <constraint firstItem="S10-3H-623" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="LtU-Ys-QFA"/>
-                            <constraint firstItem="Bv1-OJ-cm9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.333" id="NiA-In-Nrd"/>
-                            <constraint firstItem="oat-JP-Eb3" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3333" id="OzF-k5-iwv"/>
-                            <constraint firstItem="S10-3H-623" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RlC-36-k6N"/>
-                            <constraint firstItem="oat-JP-Eb3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SF7-Kh-i9f"/>
-                            <constraint firstItem="S10-3H-623" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZUY-Rw-K2s"/>
-                            <constraint firstItem="Bv1-OJ-cm9" firstAttribute="top" secondItem="S10-3H-623" secondAttribute="bottom" id="hUw-Og-DDP"/>
-                            <constraint firstItem="QTm-6D-TVu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iwC-8v-jeJ"/>
-                            <constraint firstItem="Akn-RP-ixR" firstAttribute="top" secondItem="oat-JP-Eb3" secondAttribute="bottom" id="kF2-SW-8iw"/>
-                            <constraint firstAttribute="trailing" secondItem="oat-JP-Eb3" secondAttribute="trailing" id="nc9-hw-xFR"/>
-                            <constraint firstAttribute="bottom" secondItem="QTm-6D-TVu" secondAttribute="bottom" constant="8" id="sBF-Qh-FYa"/>
-                            <constraint firstItem="Bv1-OJ-cm9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vqY-Hw-ATu"/>
-                            <constraint firstItem="Bv1-OJ-cm9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="xff-A2-gkm"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="740-DU-CFc">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="cancel" id="mXL-c1-jY5">
-                                <connections>
-                                    <action selector="didClickOnCancel:" destination="BYZ-38-t0r" id="DZN-AW-euY"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Start" id="BUt-RJ-v1h">
-                                <connections>
-                                    <action selector="didClickOnStartWithSender:" destination="BYZ-38-t0r" id="UDT-JB-1h3"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="imageView1" destination="S10-3H-623" id="lVZ-hd-XjF"/>
-                        <outlet property="imageView2" destination="oat-JP-Eb3" id="y98-De-tE1"/>
-                        <outlet property="imageView3" destination="Bv1-OJ-cm9" id="3hP-F3-Yhc"/>
-                        <outlet property="imageView4" destination="Akn-RP-ixR" id="rYu-ki-5id"/>
-                        <outlet property="sliderValueLabel" destination="oCI-c7-UFu" id="ciO-HR-MoV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-127" y="2495"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="y4g-3Y-IEG">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8hN-dh-C7O" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jeq-3p-z8B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4k0-z7-7nG"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EAl-bu-dAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-126" y="1307"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="ZDW-vU-YuK">
             <objects>
                 <viewController id="pwf-n3-XoH" sceneMemberID="viewController">
@@ -218,22 +109,53 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-FH-iB4">
-                                        <rect key="frame" x="0.0" y="195.5" width="343" height="427.5"/>
+                                        <rect key="frame" x="0.0" y="195.5" width="343" height="31"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kHh-re-At4">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <state key="normal" title="Operation Queues (addOperationWithBlock)  &gt;">
+                                                <state key="normal" title="Operation Queues (addOperation)  &gt;">
                                                     <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="eFS-1P-d60" kind="show" id="L2A-QD-N6O"/>
                                                 </connections>
                                             </button>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP1-Ek-q9f">
-                                                <rect key="frame" x="0.0" y="30" width="343" height="396.5"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <mutableString key="text">GCD is a low-level C API that execute tasks concurrently. Operation queues, are high level abstraction of the queue model, and is built on top of GCD.
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmI-Ub-Ec1" userLabel="seprator">
+                                                <rect key="frame" x="0.0" y="30" width="343" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="dXG-RE-QZe"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KkQ-gE-hrv">
+                                        <rect key="frame" x="0.0" y="226.5" width="343" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="02y-eG-Hsg">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <state key="normal" title="Operation Queues (BlockOperation)  &gt;">
+                                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="avg-Ac-gfJ" kind="show" id="eEP-fm-RVF"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D86-7l-D3K" userLabel="seprator">
+                                                <rect key="frame" x="0.0" y="30" width="343" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="2Hd-mV-1Ax"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP1-Ek-q9f">
+                                        <rect key="frame" x="0.0" y="257.5" width="343" height="365.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <mutableString key="text">GCD is a low-level C API that execute tasks concurrently. Operation queues, are high level abstraction of the queue model, and is built on top of GCD.
 Unlike GCD, they don’t conform to the First-In-First-Out order
 Set an execution priority for operations
 Add dependencies between operations, which means you can define that some operations will only be executed after the completion of other operations.
@@ -243,19 +165,10 @@ NSOperation is an abstract class which can’t be used directly so you have to u
 * NSBlockOperation – Use this class to initiate operation with one or more blocks. The operation itself can contain more than one block and the operation will be considered as finish when all blocks are executed.
 
 * NSInvocationOperation – Use this class to initiate an operation that consists of invoking a selector on a specified object.</mutableString>
-                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmI-Ub-Ec1" userLabel="seprator">
-                                                <rect key="frame" x="0.0" y="426.5" width="343" height="1"/>
-                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="dXG-RE-QZe"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -541,7 +454,7 @@ NSOperation is an abstract class which can’t be used directly so you have to u
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtS-M2-4ZF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863" y="829"/>
+            <point key="canvasLocation" x="934" y="827"/>
         </scene>
         <!--Serial Dispatch Queues View Controller-->
         <scene sceneID="OfF-sV-LIQ">
@@ -626,6 +539,97 @@ NSOperation is an abstract class which can’t be used directly so you have to u
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g71-0J-HD1" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2502" y="161"/>
+        </scene>
+        <!--Block Operation View Controller-->
+        <scene sceneID="z51-mw-VTB">
+            <objects>
+                <viewController id="avg-Ac-gfJ" customClass="BlockOperationViewController" customModule="ConcurrencyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aiK-7f-Qns"/>
+                        <viewControllerLayoutGuide type="bottom" id="FBc-QL-qyZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QZz-Pb-ous">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L6t-H1-lDT" userLabel="Image View1">
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="207.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IgR-hy-b0j">
+                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="207.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h01-7R-YZK">
+                                <rect key="frame" x="0.0" y="207.5" width="187.5" height="207.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jaf-TH-0YJ">
+                                <rect key="frame" x="187.5" y="207.5" width="187.5" height="208"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="L0p-Wc-4XQ">
+                                <rect key="frame" x="37.5" y="585" width="300" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="rLa-eP-FJu"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChangedWithSender:" destination="avg-Ac-gfJ" eventType="valueChanged" id="0Vm-3y-NJZ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVF-SS-9kv">
+                                <rect key="frame" x="177.5" y="550" width="20.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IgR-hy-b0j" firstAttribute="width" secondItem="QZz-Pb-ous" secondAttribute="width" multiplier="0.5" id="0YF-IW-0i3"/>
+                            <constraint firstItem="L0p-Wc-4XQ" firstAttribute="top" secondItem="uVF-SS-9kv" secondAttribute="bottom" constant="14" id="2Ey-eX-AAN"/>
+                            <constraint firstAttribute="trailing" secondItem="jaf-TH-0YJ" secondAttribute="trailing" id="Biw-EL-OT0"/>
+                            <constraint firstItem="L6t-H1-lDT" firstAttribute="leading" secondItem="QZz-Pb-ous" secondAttribute="leading" id="DQy-Ud-q1e"/>
+                            <constraint firstItem="jaf-TH-0YJ" firstAttribute="height" secondItem="QZz-Pb-ous" secondAttribute="height" multiplier="1/3" id="ERE-fR-QmV"/>
+                            <constraint firstItem="h01-7R-YZK" firstAttribute="width" secondItem="QZz-Pb-ous" secondAttribute="width" multiplier="0.5" id="Kha-Uu-7HK"/>
+                            <constraint firstAttribute="trailing" secondItem="IgR-hy-b0j" secondAttribute="trailing" id="NyG-JK-0Da"/>
+                            <constraint firstItem="jaf-TH-0YJ" firstAttribute="width" secondItem="QZz-Pb-ous" secondAttribute="width" multiplier="0.5" id="PQd-Ue-AEf"/>
+                            <constraint firstItem="L0p-Wc-4XQ" firstAttribute="centerX" secondItem="QZz-Pb-ous" secondAttribute="centerX" id="QK5-aH-oBY"/>
+                            <constraint firstItem="IgR-hy-b0j" firstAttribute="height" secondItem="QZz-Pb-ous" secondAttribute="height" multiplier="0.3333" id="U3u-9f-P5d"/>
+                            <constraint firstItem="uVF-SS-9kv" firstAttribute="centerX" secondItem="QZz-Pb-ous" secondAttribute="centerX" id="VaQ-Au-PhQ"/>
+                            <constraint firstItem="L6t-H1-lDT" firstAttribute="top" secondItem="QZz-Pb-ous" secondAttribute="top" id="ZhE-qy-lnE"/>
+                            <constraint firstItem="h01-7R-YZK" firstAttribute="height" secondItem="QZz-Pb-ous" secondAttribute="height" multiplier="0.333" id="exE-7K-EGa"/>
+                            <constraint firstAttribute="bottom" secondItem="L0p-Wc-4XQ" secondAttribute="bottom" constant="8" id="hQw-Vn-w5e"/>
+                            <constraint firstItem="IgR-hy-b0j" firstAttribute="top" secondItem="QZz-Pb-ous" secondAttribute="top" id="l9y-QV-Y6y"/>
+                            <constraint firstItem="h01-7R-YZK" firstAttribute="leading" secondItem="QZz-Pb-ous" secondAttribute="leading" id="qbq-z3-ttb"/>
+                            <constraint firstItem="jaf-TH-0YJ" firstAttribute="top" secondItem="IgR-hy-b0j" secondAttribute="bottom" id="rvx-Ye-h3P"/>
+                            <constraint firstItem="L6t-H1-lDT" firstAttribute="height" secondItem="QZz-Pb-ous" secondAttribute="height" multiplier="0.333" id="tsr-l4-hLG"/>
+                            <constraint firstItem="L6t-H1-lDT" firstAttribute="width" secondItem="QZz-Pb-ous" secondAttribute="width" multiplier="0.5" id="yNg-1g-nzJ"/>
+                            <constraint firstItem="h01-7R-YZK" firstAttribute="top" secondItem="L6t-H1-lDT" secondAttribute="bottom" id="zcU-Oa-53e"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="fbh-AK-Lbq">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="cancel" id="w6N-fK-7lt">
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="avg-Ac-gfJ" id="Uqh-XR-cli"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Start" id="Mc5-Dk-dKI">
+                                <connections>
+                                    <action selector="didClickOnStartWithSender:" destination="avg-Ac-gfJ" id="Upy-yH-KZO"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView1" destination="L6t-H1-lDT" id="xSp-NF-fly"/>
+                        <outlet property="imageView2" destination="IgR-hy-b0j" id="6hr-lm-tUK"/>
+                        <outlet property="imageView3" destination="h01-7R-YZK" id="hck-B2-EnK"/>
+                        <outlet property="imageView4" destination="jaf-TH-0YJ" id="E56-ek-wmr"/>
+                        <outlet property="sliderValueLabel" destination="uVF-SS-9kv" id="pOY-CU-XAM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTI-Mp-oyP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="828"/>
         </scene>
     </scenes>
 </document>
