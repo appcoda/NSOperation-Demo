@@ -20,7 +20,7 @@ class Downloader {
 }
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView1: UIImageView!
     
     @IBOutlet weak var imageView2: UIImageView!
@@ -32,17 +32,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderValueLabel: UILabel!
     
     var queue = OperationQueue()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func didClickOnStart(sender: AnyObject) {
         queue = OperationQueue()
         
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
             })
         })
         operation3.addDependency(operation2)
-
+        
         operation3.completionBlock = {
             print("Operation 3 completed, cancelled:\(operation3.isCancelled)")
         }
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
         
         self.sliderValueLabel.text = "\(sender.value * 100.0)"
     }
-
+    
     @IBAction func didClickOnCancel(sender: AnyObject) {
         
         self.queue.cancelAllOperations()
