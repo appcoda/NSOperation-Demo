@@ -1,7 +1,7 @@
 # A simple demo about NSOperation and Grand Central Dispatch
 
 <p align="center">
-  <img src ="https://github.com/amrangry/ClockWise/blob/master/logo.png?raw=true"/>
+  <img src ="https://github.com/amrangry/NSOperation-Demo/blob/master/logo.png?raw=true"/>
 </p>
 
 Dispatch queues
