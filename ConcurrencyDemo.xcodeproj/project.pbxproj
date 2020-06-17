@@ -101,10 +101,9 @@
 			};
 			buildConfigurationList = DA0283881BF90DA900AA4DAC /* Build configuration list for PBXProject "ConcurrencyDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
