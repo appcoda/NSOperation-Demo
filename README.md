@@ -113,6 +113,24 @@ public enum NSOperationQueuePriority : Int {
 ---
 More :
 
+DispatchSemaphore : https://www.swiftpal.io/articles/how-to-avoid-thread-explosion-and-deadlock-with-gcd-in-swift?fbclid=IwAR200_p7ENw6eM4b-aLXyOVyKLSYOHDINdCK1yELgGTxZn42hHwt5qSi6fU
+
+``` 
+The DispatchWorkItem class is an encapsulation of the concept of work item. There are few benefits.
+
+A dispatch work item has a cancel flag. If it is cancelled before running, the dispatch queue won’t execute it and will skip it. If it is cancelled during its execution, the cancel property return True. In that case, we can abort the execution
+
+let workItem = DispatchWorkItem {
+    // Your async code goes in here
+}
+
+// Execute the work item after 1 second
+DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: workItem)
+
+// You can cancel the work item if you no longer need it
+workItem.cancel()
+```
+
 operationQueue.maxConcurrentOperationCount = 1 
 
 QoS - new quality of service syntax
